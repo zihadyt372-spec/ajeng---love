@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ajeng ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+
+.container{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    padding:20px;
+}
+
+h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+img{
+    width:230px;
+    height:230px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 0 25px rgba(255,0,90,0.8);
+}
+
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff005a;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.heart{
+    position:absolute;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>AJENG ❤️</h1>
+
+    <p>
+        I LOVE YOU SO MUCH MY LOVE. <br>
+        FOR ME THERE IS NO DAY FOR LOVE YOU CAUSE EVERY DAY I LOVE YOU SO MUCH. <br>
+        WHEN YOU ARE WITH ME I FEEL SO HAPPY AND BLESSED.
+    </p>
+
+    <!-- photo নাম হবে photo.jpg -->
+    <img src="photo.jpg" alt="Ajeng">
+
+    <br>
+    <button onclick="showLove()">Click Here ❤️</button>
+</div>
+
+<script>
+function showLove(){
+    alert("Ajeng my love, will you marry me? 💍❤️\nForever yours, ZIHAD");
+}
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+10)+"px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
